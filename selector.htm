@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Selectors in JQuery</title>
+	<script type="text/javascript" src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$("#hide_p").click(function() {
+				$("p").hide();
+			});
+			$("#show_p").click(function() {
+				$("p").show();
+			});
+			$("#hide_public").click(function() {
+				$(".public").hide();
+			});
+			$("#hide_privacy").click(function() {
+				$(".privacy").hide();
+			});
+			$("#show_h2").click(function() {
+				$("h2").show();
+			});
+			$("#hide_sex").click(function() {
+				$("p.public").hide();
+			});
+			$("#hide_all").click(function() {
+				$("*").hide();
+			});
+			$("#show_all").click(function() {
+				$("*").show();
+			});
+			$("#hide_button").click(function() {
+				$(":button").hide();
+			});
+			$("#no_color").click(function() {
+				$("[color]").attr("color", "black");
+			});
+		});
+	</script>
+</head>
+<body>
+	<h2 class="public">欢迎来到施启扬的家！</h2>
+	<p class="public" id="sex"><font color="green">我是男孩子！</font></p>
+	<p class="privacy" id="father_name">爸爸：施国煌</p>
+	<p class="privacy" id="mother_name"><font color="red">妈妈：吴茜</font></p>
+	<p class="privacy" id="age"><font color="blue">我今年4岁啦！</font></p>
+	<button class="control" id="hide_p">隐藏内容</button>
+	<button class="control" id="show_p">显示内容</button>
+	<button class="control" id="hide_public">隐藏公开信息</button>
+	<button class="control" id="hide_privacy">隐藏隐私信息</button>
+	<button class="control" id="show_h2">显示标题</button>
+	<button class="control" id="hide_sex">隐藏性别</button>
+	<button class="control" id="hide_all">隐藏所有</button>
+	<button class="control" id="show_all">显示所有</button>
+	<button id="hide_button">别乱点了</button>
+	<button id="no_color">我讨厌花花绿绿的颜色</button>
+</body>
+</html>
