@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery Event</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$("#click").click(function() {
+				$(this).hide();
+			});
+			$("#dblclick").dblclick(function() {
+				$(this).hide();
+			});
+			$("#mouse").mouseenter(function() {
+				$(this).attr("style", "color:red");
+			});
+			$("#mouse").mouseleave(function() {
+				$(this).attr("style", "color:black");
+			});
+			$("#up_down").mousedown(function() {
+				$(this).attr("style", "font-size:15pt");
+			});
+			$("#up_down").mouseup(function() {
+				$(this).attr("style", "font-size:10pt");
+			});
+			$("input.text_input").focus(function() {
+				$(this).css("background-color", "#cc0000");
+			});
+			$("input.text_input").blur(function() {
+				$(this).css("background-color", "#ffffff");
+			});
+		});
+	</script>
+</head>
+<body>
+	<p id="click">点击我试试</p>
+	<p id="dblclick">双击是试试</p>
+	<p id="mouse" style="color:black">鼠标移进来试试</p>
+	<p id="up_down" style="font-size:10pt">鼠标按下试试</p>
+	Name: <input type="text" class="text_input" name="name" /><br/>
+	Email: <input type="text" class="text_input" name="email" />
+</body>
+</html>

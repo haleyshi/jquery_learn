@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hide &amp; Show Effect</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$("#hide").click(function() {
+				$("p").hide(3000);
+			});
+			$("#show").click(function() {
+				$("p").show("slow");
+			});
+			$("#toggle").click(function() {
+				$("p").toggle("fast");
+			});
+		});
+	</script>
+</head>
+<body>
+	<p>2015/10/06 ~ 2015/12/05</p>
+	<p>YRP</p>
+	<p>NFV</p>
+	<p>VIM - CEE</p>
+	<p>OPS</p>
+	<p>Goodbye, Ericsson.</p>
+	<button id="hide">隐藏</button>
+	<button id="show">显示</button>
+	<button id="toggle">切换</button>
+</body>
+</html>
