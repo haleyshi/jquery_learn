@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chain</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<style type="text/css">
+		#panel,#flip
+		{
+			padding:5px;
+			text-align:center;
+			background-color:#e5eecc;
+			border:solid 1px #c3c3c3;
+			width: 300px;
+		}
+		#panel
+		{
+			display:none;
+		}
+	</style>
+	<script type="text/javascript">
+		$(function() {
+			$("#flip").click(function() {
+				$("#flip").css("background-color", "red");
+				$("#panel").css("background-color", "red").slideDown(5000).slideUp(5000, function() {
+					$("#flip").css("background-color", "#e5eecc")
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="flip">点我试试－变色＋展开＋收起</div>
+	<div id="panel">
+		<p>你好吗？</p>
+		<p>你饿了啊？</p>
+		<p>你发工资了吗？</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fade In &amp; Fade Out</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$("#fadein").click(function() {
+				$("#div1").fadeIn("fast");
+				$("#div2").fadeIn("slow");
+				$("#div3").fadeIn(3000);
+			});
+			$("#fadeout").click(function() {
+				$("#div1").fadeOut(3000);
+				$("#div2").fadeOut("slow");
+				$("#div3").fadeOut("fast");
+			});
+			$("#fadetoggle").click(function() {
+				$("#div1").fadeToggle("slow");
+				$("#div2").fadeToggle(3000);
+				$("#div3").fadeToggle("fast");
+			});
+			$("#fadeto").click(function() {
+				$("#div1").fadeTo(5000, 0.15);
+				$("#div2").fadeTo(5000, 0.75);
+				$("#div3").fadeTo(5000, 0.5);
+			});
+			$("#fadeto2").click(function() {
+				$("#div1").fadeTo("slow", 1);
+				$("#div2").fadeTo("slow", 1);
+				$("#div3").fadeTo("slow", 1);
+			});
+		});
+	</script>
+</head>
+<body>
+	<button id="fadein">淡入</button>
+	<button id="fadeout">淡出</button>
+	<button id="fadetoggle">出入平安</button>
+	<button id="fadeto">淡淡淡淡淡</button>
+	<button id="fadeto2">浓浓浓浓浓</button>
+	<br/><br/>
+	<div id="div1" style="width:80px;height:80px;display:none;background-color:red"></div><br/><br/>
+	<div id="div2" style="width:80px;height:80px;display:none;background-color:green"></div><br/><br/>
+	<div id="div3" style="width:80px;height:80px;display:none;background-color:blue"></div>
+</body>
+</html>

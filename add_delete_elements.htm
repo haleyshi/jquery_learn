@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add, Delete Elements</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$("#btn1").click(function() {
+				$("p").append("<b>基本信息</b>");
+			});
+			$("#btn2").click(function() {
+				$("ol").append("<li class='added'>详细信息</li>");
+			});
+			$("#btn3").click(function() {
+				$("p").prepend("<b>基本信息</b>");
+			});
+			$("#btn4").click(function() {
+				$("ol").prepend("<li>详细信息</li>");
+			});
+			$("#btn5").click(function() {
+				var text1 = "<p>我的爸爸叫施国煌。</p>";
+				var text2 = $("<p></p>").text("我的妈妈叫吴茜。");
+				var text3 = document.createElement("p");
+				text3.innerHTML = "<font color='red'>我还有个妹妹叫启杭！</font>";
+				$("body").append(text1, text2, text3);
+			});
+			$("#btn6").click(function() {
+				$("img").before("<b>我的家</b>");
+				$("img").after("<i>在广州</i>");
+			});
+			$("#btn7").click(function() {
+				$("img").remove();
+				$("p").remove();
+			});
+			$("#btn8").click(function() {
+				$("#div1").empty();
+				$("ol").empty();
+			});
+			$("#btn9").click(function() {
+				$("li").remove(".flex");
+			});
+		});
+	</script>
+</head>
+<body>
+	<img src="images/w3schools.png">
+	<p>我叫施启扬！</p>
+	<p>今年4岁了！</p>
+	<ol>
+		<li class="flex">身高110cm</li>
+		<li class="flex">体重19kg</li>
+		<li class="fix">属兔</li>
+	</ol>
+	<div id="div1" style="height:200px;width:300px;border:1px solid black;background-color:yellow;">
+		我的学校：
+		<p>兰亭幼儿园</p>
+		<p>中一班</p>
+		<p>冯老师，江老师，杨老师</p>
+		<p>好朋友有乐航，稀稀</p>
+	</div>
+	<button id="btn1">添加文本－后</button>
+	<button id="btn2">添加列表项－后</button>
+	<button id="btn3">添加文本－前</button>
+	<button id="btn4">添加列表项－前</button>
+	<button id="btn5">添加多个元素</button>
+	<button id="btn6">前后添加</button><br><br>
+	<button id="btn7">删除整个元素</button>
+	<button id="btn8">清空子元素</button>
+	<button id="btn9">删除指定元素</button>
+</body>
+</html>

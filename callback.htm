@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Callback</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$("div").click(function() {
+				$(this).hide(8000, function(){
+					alert("区域已经隐藏！");
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<div>
+		<p>Hello</p>
+		<p>It is me</p>
+		<p>I miss you so much</p>
+		<p>好啦，别抒情啦，点我试试！</p>
+	</div>
+</body>
+</html>

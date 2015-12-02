@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slide Up &amp; Slide Down</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<style type="text/css">
+		#panel,#flip
+		{
+			padding:5px;
+			text-align:center;
+			background-color:#e5eecc;
+			border:solid 1px #c3c3c3;
+			width: 200px;
+		}
+		#panel
+		{
+			display:none;
+		}
+	</style>
+	<script type="text/javascript">
+		$(function() {
+			$("#flip").click(function() {
+				$("#panel").slideToggle(5000);
+			});
+			$("#stop").click(function() {
+				$("#panel").stop();
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="flip">展开／收起面板</div>
+	<div id="panel">
+		<p id="stop">点击停止滑动</p>
+		<p>你好吗？</p>
+		<p>你饿了啊？</p>
+		<p>你发工资了吗？</p>
+	</div>
+</body>
+</html>
