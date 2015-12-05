@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Width &amp; Height</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$("button").click(function() {
+				var htm = "";
+				htm += "<p>元素高度：" + $("#div1").height() + "</p>";
+				htm += "<p>元素宽度：" + $("#div1").width() + "</p>";
+				htm += "<p>内侧高度：" + $("#div1").innerHeight() + "</p>";
+				htm += "<p>内侧宽度：" + $("#div1").innerWidth() + "</p>";
+				htm += "<p>外侧高度：" + $("#div1").outerHeight() + "</p>";
+				htm += "<p>外侧宽度：" + $("#div1").outerWidth() + "</p>";
+				htm += "<p>总高度：" + $("#div1").outerHeight(true) + "</p>";
+				htm += "<p>总宽度：" + $("#div1").outerWidth(true) + "</p>";
+				$("#div1").html(htm);
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="div1" style="height:500px;width:300px;padding:10px;margin:5px;border:1px solid blue;background-color:lightblue;">
+		<p>高度：100</p>
+		<p>宽度：300</p>
+		<p>填充：10</p>
+		<p>边距：5</p>
+		<p>边框：1</p>
+	</div>
+	<button>获取宽度和高度</button>
+</body>
+</html>

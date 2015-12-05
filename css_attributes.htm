@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Attributes</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$("#btn1").click(function() {
+				alert("字体颜色是：" + $("p").css("color"));
+			});
+			$("#btn2").click(function() {
+				$("p").css("color", "red");
+			});
+			$("#btn3").click(function() {
+				$("p").css({
+					"background-color": "yellow",
+					"font-size": "200%"
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<p style="color:blue">现在在南航CZ3008上。</p>
+	<button id="btn1">获取字体颜色属性</button>
+	<button id="btn2">设置css属性</button>
+	<button id="btn3">设置多个css属性</button>
+</body>
+</html>
