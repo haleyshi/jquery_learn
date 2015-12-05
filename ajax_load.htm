@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AJAX Load</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$("#btn1").click(function() {
+				$("#div1").load("test.txt");
+			});
+			$("#btn2").click(function() {
+				$("#div1").load("test.txt #p1");
+			});
+			$("#btn3").click(function() {
+				$("#div1").load("test.txt", function(responseTxt, statusTxt, xhr){
+				    if(statusTxt == "success")
+				    	alert("成功从文件加载内容！");
+				    if(statusTxt == "error")
+				    	alert("Error: " + xhr.status + ": " + xhr.statusText);
+			  	});
+			});			
+		});
+	</script>
+</head>
+<body>
+	<div id="div1">Filler, will be replaced by the contents read from test.txt file.<br><br></div>
+	<button id="btn1">load</button>
+	<button id="btn2">load("test.txt #p1")</button>
+	<button id="btn3">load with callback</button>
+</body>
+</html>
