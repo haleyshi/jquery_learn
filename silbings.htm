@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Silbings</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<style type="text/css">
+		.siblings *
+		{
+			display: block;
+			color: lightblue;
+			border: 2px solid lightgrey;
+			padding: 5px;
+			margin: 15px;
+		}
+	</style>
+	<script type="text/javascript">
+		$(function() {
+			$("#btn1").click(function() {
+				$(".siblings *").css({"color":"lightblue", "border":"2px solid lightgrey"});
+				$("h2").siblings().css({"color":"red", "border":"2px solid red"});
+			});
+			$("#btn2").click(function() {
+				$(".siblings *").css({"color":"lightblue", "border":"2px solid lightgrey"});
+				$("h2").siblings("p").css({"color":"red", "border":"2px solid red"});
+			});
+			$("#btn3").click(function() {
+				$(".siblings *").css({"color":"lightblue", "border":"2px solid lightgrey"});
+				$("h2").next().css({"color":"red", "border":"2px solid red"});
+			});
+			$("#btn4").click(function() {
+				$(".siblings *").css({"color":"lightblue", "border":"2px solid lightgrey"});
+				$("h2").nextAll().css({"color":"red", "border":"2px solid red"});
+			});
+			$("#btn5").click(function() {
+				$(".siblings *").css({"color":"lightblue", "border":"2px solid lightgrey"});
+				$("h2").nextUntil("h5").css({"color":"red", "border":"2px solid red"});
+			});
+			$("#btn6").click(function() {
+				$(".siblings *").css({"color":"lightblue", "border":"2px solid lightgrey"});
+				$("h2").prev().css({"color":"red", "border":"2px solid red"});
+			});
+			$("#btn7").click(function() {
+				$(".siblings *").css({"color":"lightblue", "border":"2px solid lightgrey"});
+				$("h2").prevAll().css({"color":"red", "border":"2px solid red"});
+			});
+			$("#btn8").click(function() {
+				$(".siblings *").css({"color":"lightblue", "border":"2px solid lightgrey"});
+				$("h2").prevUntil("p").css({"color":"red", "border":"2px solid red"});
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="siblings">div (parent)
+		<p>p</p>
+		<span>span</span>
+		<h1>h1</h1>
+		<h2>h2</h2>
+		<h3>h3</h3>
+		<h4>h4</h4>
+		<h5>h5</h5>
+		<p>p</p>
+	</div>
+	<button id="btn1">h2.siblings</button>
+	<button id="btn2">h2.siblings("p")</button>
+	<button id="btn3">h2.next</button>
+	<button id="btn4">h2.nextAll</button>
+	<button id="btn5">h2.nextUtil("h5")</button>
+	<button id="btn6">h2.prev</button>
+	<button id="btn7">h2.prevAll</button>
+	<button id="btn8">h2.prevUtil("p")</button>
+</body>
+</html>

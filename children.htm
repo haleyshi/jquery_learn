@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Children</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<style type="text/css">
+		.descendants *
+		{
+			display: block;
+			color: lightblue;
+			border: 2px solid lightgrey;
+			padding: 5px;
+			margin: 15px;
+		}
+	</style>
+	<script type="text/javascript">
+		$(function() {
+			$("#btn1").click(function() {
+				$(".descendants *").css({"color":"lightblue", "border":"2px solid lightgrey"});
+				$("div").children().css({"color":"red", "border":"2px solid red"});
+			});
+			$("#btn2").click(function() {
+				$(".descendants *").css({"color":"lightblue", "border":"2px solid lightgrey"});
+				$("div").find("*").css({"color":"red", "border":"2px solid red"});
+			});
+			$("#btn3").click(function() {
+				$(".descendants *").css({"color":"lightblue", "border":"2px solid lightgrey"});
+				$("div").children("p.c1").css({"color":"red", "border":"2px solid red"});
+			});
+			$("#btn4").click(function() {
+				$(".descendants *").css({"color":"lightblue", "border":"2px solid lightgrey"});
+				$("div").find("span").css({"color":"red", "border":"2px solid red"});
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="descendants">div (current)
+		<p class="c1">p.c1 (child)
+			<span>span (grandchild)</span>
+		</p>
+		<p class="c2">p.c2 (child)
+			<span>span (grandchild)</span>
+		</p>
+	</div>
+	<button id="btn1">标记直接子元素</button>
+	<button id="btn2">标记所有子元素</button>
+	<button id="btn3">标记指定直接子元素</button>
+	<button id="btn4">标记指定子元素</button>
+</body>
+</html>
