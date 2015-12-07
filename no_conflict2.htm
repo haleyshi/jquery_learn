@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery noConflict</title>
+	<script type="text/javascript" src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		var sgh = $.noConflict();  // Release the control of $, so $ can be used by other JavaScript struts
+		sgh(document).ready(function() {
+			sgh("button").click(function() {
+				sgh("p").text("jQuery is still working after release the $ to other struts!");
+			});
+		});
+	</script>
+</head>
+<body>
+	<p>$ released, use own created var as the replacement!</p><br><br>
+	<button>JQuery NoConflict</button>
+</body>
+</html>

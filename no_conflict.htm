@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery noConflict</title>
+	<script type="text/javascript" src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		$.noConflict();  // Release the control of $, so $ can be used by other JavaScript struts
+		jQuery(document).ready(function() {
+			jQuery("button").click(function() {
+				jQuery("p").text("jQuery is still working after release the $ to other struts!");
+			});
+		});
+	</script>
+</head>
+<body>
+	<p>$ released, use jQuery as the replacement!</p><br><br>
+	<button>JQuery NoConflict</button>
+</body>
+</html>

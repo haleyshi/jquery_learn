@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JSON Padding Demo</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$.getJSON("http://www.runoob.com/try/ajax/jsonp.php?jsoncallback=?", function(data) {
+				var html = "<ul>";
+				for (var i=0; i<data.length; i++) 
+				{
+					html += "<li>" + data[i] + "</li>";
+				}
+				html += "</ul>";
+
+				$("#divCustomers").html(html);
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="divCustomers"></div>
+</body>
+</html>
