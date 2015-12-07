@@ -9,8 +9,8 @@
 	<script type="text/javascript" src="./js/jquery.metadata.js"></script>
 	<script type="text/javascript">
 		$(function() {
-			//$("#signupForm").validate();
-			$("#signupForm").validate({meta: "validate"});
+			$("#signupForm").validate();
+			//$("#signupForm").validate({meta: "validate"});
 		});
 	</script>
 </head>
@@ -26,11 +26,11 @@
 		</p>
 		<p>
 			<label for="password">Password</label>
-			<input id="password" name="password" type="password" class="{required:true,minlength:5}" />
+			<input id="password" name="password" type="password" class="{required:true, minlength:5}" />
 		</p>
 		<p>
 			<label for="confirm_password">Confirm Password</label>
-			<input id="confirm_password" name="confirm_password" type="password" class="{required:true,minlength:5,equalTo:'#password'}" />
+			<input id="confirm_password" name="confirm_password" type="password" class="{required:true, minlength:5, equalTo:'#password'}" />
 		</p>
 		<p>
 			<input class="submit" type="submit" value="Submit" />
